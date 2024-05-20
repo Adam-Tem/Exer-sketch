@@ -7,3 +7,7 @@ Below is the daily workflow of the Exer-sketch project: goals achieved, problems
 ### 0.5 hours
 
 Project repo has officially been set up and some basic goals and outlines identified.
+
+### 1 hour
+
+Just gone and made sure that node and python are all up to date and good to go for the project. Managed to do a little exploring of the Strava API but feel that it may be easier to first parse a GPX file and then get the exports from the API, just in case I do not end up using the Strava API. Managed to get the first little bit of GPX parsing done, by getting the lat/long value of the first point in a file.

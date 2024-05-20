@@ -4,7 +4,7 @@ This project will involve developing both a frontend and backend for a mobile ap
 
 ## Frontend Goals
 
-The goals for the frontend development for the Exer-sketch app are as follows:
+The frontend of this app will be developed using Expo for react native. I will aim to use TypeScript to try and produce type-safe, clean code. React native will also allow for cross-platform compatibility. Furthermore, due to the popularity of react native there will be many tutorials and examples of code produced by others that should help me through the project. Listed below are the high-level frontend goals:
 
 - Provide an interface so users can see their uploaded GPS maps.
 - Allow users to navigate to other user profiles, providing the ability to follow other users.
@@ -16,6 +16,8 @@ The goals for the frontend development for the Exer-sketch app are as follows:
 - Let users see what level they are at and how many points they need to get to the next stage.
 
 ## Backend Goals
+
+I will most likely try to develop the backend and algorithms listed below using Python, as I feel that it is the most intuitive language for such a task and has a wide variety of libraries available to do many things. It may not be the most efficient but will be a good start. Listed below are the high-level backend goals:
 
 - Create an algorithm that can identify the sketch created by a GPS map.
 - Store user uploads in a database, so previous efforts can be analysed.
