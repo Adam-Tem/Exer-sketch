@@ -19,3 +19,7 @@ Quick update, managed to get the lat long values being plotted in a matplotlib g
 ### 1.25 hours
 
 Some further progress has been made. The initial adjustments to a square shape modifier have been added, by reducing the x and y coords of the corners to fit inside their closest points, but does not factor in for any midpoint intersections.
+
+### 1.25 hours
+
+The algorithm is showing some promise. I now have the square managing to be shrunk into a particular space of the GPS shape, but it is now about expanding it so that it is the optimal size. I have also managed to abstract the coordinate point into a separate class, just trying to keep things tidy from the get go.
