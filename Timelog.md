@@ -11,3 +11,11 @@ Project repo has officially been set up and some basic goals and outlines identi
 ### 1 hour
 
 Just gone and made sure that node and python are all up to date and good to go for the project. Managed to do a little exploring of the Strava API but feel that it may be easier to first parse a GPX file and then get the exports from the API, just in case I do not end up using the Strava API. Managed to get the first little bit of GPX parsing done, by getting the lat/long value of the first point in a file.
+
+### 0.75 hours
+
+Quick update, managed to get the lat long values being plotted in a matplotlib graph, and have made it so that the graph is connected. I will now focus on trying to get some sort of shape inside the graph and try to expand it to the biggest size possible.
+
+### 1.25 hours
+
+Some further progress has been made. The initial adjustments to a square shape modifier have been added, by reducing the x and y coords of the corners to fit inside their closest points, but does not factor in for any midpoint intersections.
