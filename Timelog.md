@@ -23,3 +23,49 @@ Some further progress has been made. The initial adjustments to a square shape m
 ### 1.25 hours
 
 The algorithm is showing some promise. I now have the square managing to be shrunk into a particular space of the GPS shape, but it is now about expanding it so that it is the optimal size. I have also managed to abstract the coordinate point into a separate class, just trying to keep things tidy from the get go.
+
+## 21 May 2024
+
+### 2 minutes
+
+Managed to resolve the logic issue that I had for not shrinking the square enough. I was adjusting the wrong side of the scale so it would then not move any further.
+
+## 03 June 2024
+
+### 1.5 hours
+
+Well then... An impromptu training camp holiday for a week in Mallorca meant this was put completely on hold but the holiday was great and I don't feel super focussed to work on this but know that I need to have something to show when I go to job interviews so that is motivation enough! Have managed to refactor the code a little for shrinking down the rectangle. It means that the direction of corner checks can be carried out in the opposite way, which works well for one test case but not so much for the second test case...
+
+### 1 hour
+
+Okay, some progress on the expansion side of things, still unsure it is actually creating the most optimal shape from the initial shrink but can continue working on this and test more examples.
+
+### 0.5 hours
+
+Some reasonable progress with the expansion function. Still struggling to try to parameterise it in a nice way and still a few logic errors but decent work nonetheless.
+
+## 10 June 2024
+
+### 1 hour
+
+Not good leaving the project this long... After some head scratching and reshuffling there, the expansion only option seems to be working the best, just need to add a few more case catchers to ensure that the first rectangle drawn is fully inside the GPS outline, but then it should be close to the rectangle algorithm being done??? WHo knows at this point.
+
+## 13 June 2024
+
+### 1 hour
+
+Still only an hour but looked at the start of the design process for the frontend mobile development side of things. Colour palette will honestly be the hardest challenge but I am using Figma which I guess is at least some sort of experience.
+
+## 15 June 2024
+
+### 2 hours
+
+After a bad training day, I've managed to actually put a bit more time towards the design of this! Pretty much completed the Figma design of the app and done an initial round of user testing and collecting feedback from the fam. Colourway was actually liked and navigation and layout okay also, however some potential clashes with the gps drawings used and the background colours but an easy fix. Time to start the actual app!
+
+### 1 hour
+
+I have successfully downloaded the Android studio app for testing purposes of the expo app, however it is struggling big time on my laptop and I'm not too sure why, but is at least displaying the basics.
+
+### 1.5 hours
+
+Okay the initial setup of the expo app is going well. Some very annoying issues with the layout and I forgot that it is by columns instead of rows that the spacing works so spent 20 minutes trying to work that out but I have managed to get at least some sort of general layout going!
