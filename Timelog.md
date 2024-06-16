@@ -69,3 +69,17 @@ I have successfully downloaded the Android studio app for testing purposes of th
 ### 1.5 hours
 
 Okay the initial setup of the expo app is going well. Some very annoying issues with the layout and I forgot that it is by columns instead of rows that the spacing works so spent 20 minutes trying to work that out but I have managed to get at least some sort of general layout going!
+
+## 16 June 2024
+
+### 0.75 hours
+
+Well I am definitely scratching my head now. I have added a simple arrow function that logs when the pressable components are clicked and that works fine, but I am now getting an error where I have a router problem? Hmm, some debugging and googling needed.
+
+### 1 hour
+
+The learning curve is pretty steep but we are getting there. Managed to create a mini test dataset and then now have it displayed using a flatlist which is cool! I can understand now that each of these values in the dataset can then be contained inside their own component style to be formatted nicely, so I guess that can be next!
+
+### 1 hour
+
+After a little bit of chatGPT prompting and some design prompts from dad, we now have a working leaderboard that is displaying scores from a json list in order! A bit of a mess at the moment as it is all just in the one file for the globalLeaderboard but the flatlist is cool and then to actually have a bit of logic in is nice as well. I guess the next goal would be to get some sort of list for the home page display and try and switch between them, or maybe first do it for a synthetic global and local list.
