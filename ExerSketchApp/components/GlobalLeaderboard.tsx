@@ -31,7 +31,11 @@ const leaderboardStyling = StyleSheet.create(
         return scores.slice().sort((a, b) => b.score - a.score);
     }
 
-const GlobalLeaderboard = ({ scores }:{scores: userScore[]} ) => {
+    interface globalLeaderboardProps {
+        scores: userScore[],
+    }
+
+const GlobalLeaderboard = ({scores} : globalLeaderboardProps) => {
 
     const orderedScores = orderScores(scores);
 

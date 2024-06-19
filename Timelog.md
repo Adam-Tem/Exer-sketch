@@ -83,3 +83,15 @@ The learning curve is pretty steep but we are getting there. Managed to create a
 ### 1 hour
 
 After a little bit of chatGPT prompting and some design prompts from dad, we now have a working leaderboard that is displaying scores from a json list in order! A bit of a mess at the moment as it is all just in the one file for the globalLeaderboard but the flatlist is cool and then to actually have a bit of logic in is nice as well. I guess the next goal would be to get some sort of list for the home page display and try and switch between them, or maybe first do it for a synthetic global and local list.
+
+## 17 June 2024
+
+### 3 hours
+
+Probably a cumulative 3 hours of fighting against types using typescript. I think I will just swap to javascript...
+
+## 19 June 2024
+
+### 0.75 hours
+
+Somehow managed to get the navigation bar to work in a reasonably speedy manner and it is now functional on the app! Decided not to pass the data from the index and just upload it to the leaderboard screen, but this may need changed in the future. But for now it will do!
