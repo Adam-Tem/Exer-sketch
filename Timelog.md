@@ -95,3 +95,9 @@ Probably a cumulative 3 hours of fighting against types using typescript. I thin
 ### 0.75 hours
 
 Somehow managed to get the navigation bar to work in a reasonably speedy manner and it is now functional on the app! Decided not to pass the data from the index and just upload it to the leaderboard screen, but this may need changed in the future. But for now it will do!
+
+## 20 June 2024
+
+### 1.5 hours
+
+I have successfully got the app to be able to 'upload' a file (or at least get the location of a file stored on a variable) that should then be able to be passed to the backend to do some magic! This is where it starts to get serious because it is using tools like axios and flask that require a bit more brain power than just designing, but so far so good!

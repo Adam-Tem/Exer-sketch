@@ -1,9 +1,7 @@
 import { View, Image, Pressable } from 'react-native'
 import { RootStackParamList } from '@/app';
-import { StackNavigationProp } from '@react-navigation/stack';
 import data from "@/data/scores.json"
 import { userScore } from '@/types/userScore';
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { NavigationProp } from "@react-navigation/native";
 
 const NavBarMain = ({ navigation }: {navigation : NavigationProp<RootStackParamList>}) => {
