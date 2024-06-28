@@ -101,3 +101,21 @@ Somehow managed to get the navigation bar to work in a reasonably speedy manner 
 ### 1.5 hours
 
 I have successfully got the app to be able to 'upload' a file (or at least get the location of a file stored on a variable) that should then be able to be passed to the backend to do some magic! This is where it starts to get serious because it is using tools like axios and flask that require a bit more brain power than just designing, but so far so good!
+
+## 21 June 2024
+
+### 1.25 hours
+
+I have started to try and set up a Flask backend but I guess it is obvious problems I am encoutnering as when I am "hosting" the server on localhost of my machine, my phone then does not recognise this as localhost, so it really has to be a live server for this to work... Will need to look into free options!
+
+## 27 June 2024
+
+### 2.5 hours
+
+Well that was some serious flow state with the coding there as time just slipped away! Managed to get some sort of file upload going and it can be accessed across multiple devices, nice!!!
+
+## 28 June 2024
+
+## 1.5 hours
+
+I have now successfully got the gpx files to upload onto the local server and then have them be displayed on the home page! I guess it is getting close to the time to actually integrate the algorithm, but it may be best first to get the visuals of the activities to a suitable position and then link it up, but another step in the right direction.

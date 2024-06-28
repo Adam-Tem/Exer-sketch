@@ -3,15 +3,14 @@ import * as DocumentPicker from 'expo-document-picker';
 import { Dispatch, SetStateAction } from "react";
 
       
-const uploadGPX = async (setFile: Dispatch<SetStateAction<string>>) =>{
-    const response = await DocumentPicker.getDocumentAsync({})
+const uploadGPX = async (setFile: Dispatch<SetStateAction<DocumentPicker.DocumentPickerResult| null>>) =>{
+    const response = await DocumentPicker.getDocumentAsync({type: 'application/gpx+xml'})
    console.log(response.assets)
    if (response.assets){
-    console.log(response.assets[0]["uri"])
-   setFile(response.assets[0]["uri"])}
+   setFile(response)}
  }
 
-const UploadGPXButton = ({setFile}: {setFile: Dispatch<SetStateAction<string>>}) => {
+const UploadGPXButton = ({setFile}: {setFile: Dispatch<SetStateAction<DocumentPicker.DocumentPickerResult| null>>}) => {
 
     return(
     <View>

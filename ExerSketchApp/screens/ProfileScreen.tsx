@@ -3,13 +3,24 @@ import NavBarMain from "@/components/NavBarMain";
 import { NavigationProp } from "@react-navigation/native";
 import { RootStackParamList } from "@/app";
 import UploadGPXButton from "@/components/UploadGPXButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import PostActivity from "@/components/PostActivity";
+import * as DocumentPicker from 'expo-document-picker';
 
 
 
 export default function ProfileScreen( { navigation } : {navigation: NavigationProp<RootStackParamList>}){
     
-   const [file, setFile] = useState<string>("")
+   const [file, setFile] = useState<DocumentPicker.DocumentPickerResult | null>(null);
+   const [fileName, setFileName] = useState<string>("");
+   useEffect(() => {
+      if(file){
+         if(file.assets){
+      setFileName(file.assets[0].name)
+
+         }
+      }
+   })
 
    return(
     <View style={{flex: 1, backgroundColor: "#493657"}}>
@@ -18,7 +29,8 @@ export default function ProfileScreen( { navigation } : {navigation: NavigationP
        margin: "5%", marginBottom: "0%"}}>
         <Text style={{fontSize: 28}}>Welcome to the profile screen!</Text>
         <UploadGPXButton setFile={setFile}></UploadGPXButton>
-        <Button title="View upload" onPress={() => console.log(file)}></Button>
+        <Text>{fileName}</Text>
+        <PostActivity gpxFile={file}></PostActivity>
        </View>
        <NavBarMain navigation={navigation}></NavBarMain>
   </View>
