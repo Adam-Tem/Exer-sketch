@@ -119,3 +119,29 @@ Well that was some serious flow state with the coding there as time just slipped
 ## 1.5 hours
 
 I have now successfully got the gpx files to upload onto the local server and then have them be displayed on the home page! I guess it is getting close to the time to actually integrate the algorithm, but it may be best first to get the visuals of the activities to a suitable position and then link it up, but another step in the right direction.
+
+## 02 July 2024
+
+### 2 hours
+
+Added a bit of styling to the upload button and now have it so that the data is uploaded automatically on the home page but need to work out how to reload the data after new stuff has been added.
+
+### 1.5 hours
+
+I have moved back to the algorithm side of things and I am actually pretty close to getting the square expansion working! Of course a quick google search and there already exists a stack overflow page that shows a matplotlib function that can check if the points of a polygon fall inside an outline... That is pretty much the algorithm that I have been trying to design but I feel that my solution may be faster? Unsure, will need to test but good progress anyways.
+
+## 03 July 2024
+
+### 1 hour
+
+The square algorithm seems to be working fairly successfully now! However, it is rather inefficient... I am making a deep copy of the corners every loop and I don't even really know the time complexity of the "contains point" matplotlib function, but given enough iterations a near optimal square is selected! I could probably just chuck in a "break" for the time being to ensure that the loop doesn't run too long, as the issue I think is when it is trying to find a suitable starting point for shape.
+
+### 0.25 hours
+
+UPDATE: the error occurs when it is a point in a gpx graph that only has one line in it, so no full loop. It means that the corners can assume they are "inside" the grpah as there is no actual volume of space at this point. I knid of thought that only round gpx graphs would really be functional for this but this proves the point. Will just need to design some sort of clause to catch this.
+
+## 04 July 2024
+
+### 1 hour
+
+After more so just going over the code as opposed to changing anything, I feel like the square algorithm is pretty much there. The size it expands to may not be bang on the maximum but will be very close to it. Although, I have now come to realise that it will not be as simple as fitting a circle or triangle inside the biggest square as they may be able to expand further...

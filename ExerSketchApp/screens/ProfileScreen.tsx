@@ -13,10 +13,12 @@ export default function ProfileScreen( { navigation } : {navigation: NavigationP
     
    const [file, setFile] = useState<DocumentPicker.DocumentPickerResult | null>(null);
    const [fileName, setFileName] = useState<string>("");
+   const [isFile, setIsFile] = useState<boolean>(false);
    useEffect(() => {
       if(file){
          if(file.assets){
       setFileName(file.assets[0].name)
+      setIsFile(true)
 
          }
       }
@@ -30,7 +32,7 @@ export default function ProfileScreen( { navigation } : {navigation: NavigationP
         <Text style={{fontSize: 28}}>Welcome to the profile screen!</Text>
         <UploadGPXButton setFile={setFile}></UploadGPXButton>
         <Text>{fileName}</Text>
-        <PostActivity gpxFile={file}></PostActivity>
+        <PostActivity gpxFile={file} isFile={isFile}></PostActivity>
        </View>
        <NavBarMain navigation={navigation}></NavBarMain>
   </View>

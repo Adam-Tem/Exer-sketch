@@ -13,15 +13,20 @@ export default function HomeScreen( { navigation } : {navigation: NavigationProp
 
   const [data, setData] = useState<activityData[]>([])
 
-  const fetchData = async () =>{
-    try{
-      const response = await axios.get("http://192.168.0.38:5000/activities")
-      setData(response.data)
-      console.log(data)
-    }catch(error){
-      console.log(error)
+  
+
+  useEffect(() => {
+    const fetchData = async () =>{
+      try{
+        const response = await axios.get("http://192.168.0.38:5000/activities")
+        setData(response.data)
+        console.log(data)
+      }catch(error){
+        console.log(error)
+      }
     }
-  }
+    fetchData()
+  }, [])
 
     return(
     <View style={{flex: 1, backgroundColor: "#493657"}}>
@@ -29,7 +34,7 @@ export default function HomeScreen( { navigation } : {navigation: NavigationProp
     <View style={{flex: 1, backgroundColor: "#087E8B", width: "90%",
        margin: "5%", marginBottom: "0%"}}>
         <Text style={{fontSize: 28}}>Welcome to the home page!</Text>
-        <Button title="get data" onPress={fetchData}></Button>
+        {/* <Button title="get data"></Button> */}
         <FlatList 
             data={data}
             renderItem={ ({item}) =>

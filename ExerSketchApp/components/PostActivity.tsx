@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text, TextInput, Button } from "react-native";
+import { View, StyleSheet, Text, TextInput, Button, Pressable } from "react-native";
 import { useState } from "react";
 import axios from "axios";
 import * as DocumentPicker from 'expo-document-picker';
@@ -21,12 +21,20 @@ const PostActivityStyling = StyleSheet.create(
             fontSize: 22,
             color: "white",
             margin: 5,
+        },
+        button: {
+            
+            margin: "auto",
+            marginTop: 20,
+            width: "90%",
+            padding: 10
         }
         
     }
 )
 
 const uploadActivity = (title: string, gpxFile: DocumentPicker.DocumentPickerResult | null) =>{
+
 
     const formData = new FormData();
     if(gpxFile)
@@ -47,7 +55,16 @@ formData.append("title", title)
     ).then(response => console.log(response.data))
 }
 
-const PostActivity= ({gpxFile}: {gpxFile: DocumentPicker.DocumentPickerResult | null}) => {
+const buttonStyling = (isFile: boolean) => {
+ 
+        return StyleSheet.create({
+            buttonText: {
+            color: isFile ? "white" : "#b1b1b1",
+            textAlign: "center",
+            fontSize: 28}})
+            }
+
+const PostActivity= ({gpxFile, isFile}: {gpxFile: DocumentPicker.DocumentPickerResult | null, isFile : boolean}) => {
 
     
     const handleTitleChange = (input: string) =>{
@@ -55,6 +72,8 @@ const PostActivity= ({gpxFile}: {gpxFile: DocumentPicker.DocumentPickerResult | 
     }
 
     const [title, setTitle] = useState<string>("")
+    const styles = buttonStyling(isFile)
+    const [bgColor, setBgColor] = useState<string>("blue")
 
     return(
         <View style={PostActivityStyling.body}>
@@ -64,7 +83,17 @@ const PostActivity= ({gpxFile}: {gpxFile: DocumentPicker.DocumentPickerResult | 
             onChangeText={handleTitleChange}></TextInput>
 
             
-            <Button title="Upload new post" onPress={() => uploadActivity(title, gpxFile)}></Button>
+            <Pressable  
+            disabled={!isFile} 
+            onPress={() => uploadActivity(title, gpxFile)}
+            onPressIn={() => setBgColor("#04DDFF")}
+            onPressOut={() => setBgColor("blue")}
+            style={PostActivityStyling.button}  
+                {...{backgroundColor: !isFile ? "#505050" : bgColor}}
+            
+            >
+                <Text style={styles.buttonText}>Upload a File</Text>
+            </Pressable>
         </View>
     )
 }
